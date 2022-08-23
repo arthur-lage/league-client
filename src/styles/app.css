@@ -24,6 +24,7 @@
 .left form {
   max-width: 24rem;
   width: 100%;
+  height: 64rem;
 }
 
 .left form .input-wrapper {
@@ -42,8 +43,11 @@
   width: 100%;
   border: 0;
   transition: 0.15s ease;
+  font-weight: 900;
   height: 4rem;
   padding-left: .65rem;
+  border-radius: .4rem;
+  outline: 0;
   background: #ededed;
   border: 2px solid transparent;
 }
@@ -58,8 +62,7 @@
 }
 
 .left form .input-wrapper .input-field input:focus ~ label {
-  top: 0;
-  transform: translateY(0);
+  opacity: 0;
 }
 
 .left form .input-wrapper .input-field label {
@@ -69,7 +72,7 @@
   cursor: text;
   transform: translateY(-50%);
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: 0.05rem;
 }
 
@@ -140,7 +143,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2.5rem 0;
+  margin: 10rem 0 3.5rem 0;
 }
 
 .left form .submit-form {
@@ -164,6 +167,37 @@
 
 .left form .submit-form.valid:hover {
   filter: brightness(0.85);
+}
+
+.left .other-links {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.left .other-links .cant-sign-in, .left .other-links .create-account, .left .other-links .version {
+  font-size: 1.25rem;
+  color: #9d9491;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.left .other-links .cant-sign-in:hover, .left .other-links .create-account:hover {
+  color: #111;
+}
+
+.left .other-links .version {
+  position: absolute;
+  right: 3rem;
+  top: 2rem;
+  transition: .3s ease;
+}
+
+.left .other-links .version:hover {
+  color: #111;
 }
 
 .right {
@@ -225,15 +259,15 @@
   padding: 1rem;
   border-radius: 2rem;
   cursor: pointer;
-  box-shadow: 0px 0px 5px 2.5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 5px 2.5px rgba(0, 0, 0, 0.25);
   border: 0;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
 }
 
 .right .user-wrapper svg {
   transition: 0.25s ease;
-  color: #beada7;
+  color: #eaeaea;
 }
 
 .right .user-wrapper:hover svg {

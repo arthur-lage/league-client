@@ -13,8 +13,25 @@ import { AiFillApple } from "react-icons/ai";
 
 import CharactersImage from "./assets/characters.jpg";
 import RiotGamesLogo from "./assets/logo.png";
+import { FormEvent, useEffect, useState } from "react";
 
 export function App() {
+  const [isFormValid, setIsFormValid] = useState(false);
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+
+  useEffect(() => {
+    if (name.length > 1 && password.length > 0) {
+      setIsFormValid(true);
+    } else {
+      setIsFormValid(false);
+    }
+  }, [name, password]);
+
+  function handleForm(e: FormEvent) {
+    e.preventDefault();
+  }
+
   return (
     <div className="container">
       <div className="left">
@@ -22,15 +39,25 @@ export function App() {
 
         <h1 className="title">Sign in</h1>
 
-        <form>
+        <form onSubmit={handleForm}>
           <div className="input-wrapper">
             <div className="input-field">
               <label htmlFor="username">Username</label>
-              <input type="text" id="username" />
+              <input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                type="text"
+                id="username"
+              />
             </div>
             <div className="input-field">
               <label htmlFor="password">Password</label>
-              <input type="password" id="password" />
+              <input
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                type="password"
+                id="password"
+              />
             </div>
           </div>
 
@@ -51,16 +78,27 @@ export function App() {
           </div>
 
           <div className="submit-form-wrapper">
-            <button className="submit-form valid" type="submit">
+            <button
+              className={`submit-form ${isFormValid ? "valid" : ""}`}
+              type="submit"
+            >
               <BsArrowRight size={36} />
             </button>
           </div>
         </form>
 
-        <a href="#">CAN'T SIGN IN?</a>
-        <a href="#">CREATE ACCOUNT</a>
+        <div className="other-links">
+          <a className="cant-sign-in" href="#">
+            CAN'T SIGN IN?
+          </a>
+          <a className="create-account" href="#">
+            CREATE ACCOUNT
+          </a>
 
-        <a href="#">V56.0.0</a>
+          <a className="version" href="#">
+            V56.0.0
+          </a>
+        </div>
       </div>
 
       <div className="right">
