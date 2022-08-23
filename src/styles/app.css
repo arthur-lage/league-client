@@ -398,6 +398,30 @@
   display: none;
 }
 
+@media screen and (min-width: 1120px) {
+  .container .left {
+    max-width: 10vw;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .container .left {
+    max-width: 20vw;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .container .left {
+    max-width: 45vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container .left {
+    max-width: 52.5vw;
+  }
+}
+
 @media screen and (max-width: 550px) {
   .container {
     display: none;
