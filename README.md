@@ -6,7 +6,8 @@ A clone of the League of Legends game client, made using modern web technologies
 
 ## 🌆 Images
 
-
+<img src="./assets/Screenshot_1.png" >
+<img src="./assets/Screenshot_2.png" >
 
 ## ⚠ Requirements
 
