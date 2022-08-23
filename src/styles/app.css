@@ -1,3 +1,279 @@
 .container {
   display: flex;
 }
+
+.left {
+  width: 35vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.left .logo {
+  margin-top: 5rem;
+  width: 15rem;
+  margin-bottom: 1rem;
+}
+
+.left .title {
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin: 2.5rem 0 1.25rem 0;
+}
+
+.left form {
+  max-width: 24rem;
+  width: 100%;
+}
+
+.left form .input-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.5rem;
+}
+
+.left form .input-wrapper .input-field {
+  position: relative;
+  width: 100%;
+}
+
+.left form .input-wrapper .input-field input {
+  width: 100%;
+  border: 0;
+  transition: 0.15s ease;
+  height: 4rem;
+  padding-left: .65rem;
+  background: #ededed;
+  border: 2px solid transparent;
+}
+
+.left form .input-wrapper .input-field input:hover {
+  background: #dedede;
+}
+
+.left form .input-wrapper .input-field input:focus {
+  background: transparent;
+  border-color: #111;
+}
+
+.left form .input-wrapper .input-field input:focus ~ label {
+  top: 0;
+  transform: translateY(0);
+}
+
+.left form .input-wrapper .input-field label {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  cursor: text;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+}
+
+.left form .social-login {
+  width: 100%;
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left form .social-login button {
+  display: flex;
+  width: 30%;
+  border: 0;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  justify-content: center;
+}
+
+.left form .social-login .facebook {
+  background: #1877f2;
+}
+
+.left form .social-login .facebook:hover {
+  filter: brightness(0.85);
+}
+
+.left form .social-login .google {
+  background: #efefef;
+}
+
+.left form .social-login .google:hover {
+  box-shadow: 0px 0px 1px 2.5px rgba(0, 0, 0, 0.25);
+}
+
+.left form .social-login .apple {
+  background-color: #000;
+}
+
+.left form .social-login .apple:hover {
+  background-color: #121212;
+}
+
+.left form .stay-signed-in {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.left form .stay-signed-in input {
+  cursor: pointer;
+}
+
+.left form .stay-signed-in label {
+  cursor: pointer;
+  color: #111;
+  font-weight: 600;
+}
+
+.left form .submit-form-wrapper {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2.5rem 0;
+}
+
+.left form .submit-form {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 3px solid #e8e8e8;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  color: #e8e8e8;
+}
+
+.left form .submit-form.valid {
+  color: #fff;
+  background: #d13639;
+  border-color: #d13639;
+}
+
+.left form .submit-form.valid:hover {
+  filter: brightness(0.85);
+}
+
+.right {
+  position: relative;
+  width: 100%;
+}
+
+.right .characters {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.right .warning-wrapper {
+  position: absolute;
+  top: 5rem;
+  left: 2rem;
+}
+
+.right .warning-wrapper .warning {
+  position: relative;
+  top: -25px;
+  width: 0;
+  height: 0;
+  border: 25px solid transparent;
+  border-bottom-color: #d925e5;
+}
+
+.right .warning-wrapper .warning::after {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 25px;
+  width: 0;
+  height: 0;
+  border: 25px solid transparent;
+  border-top-color: #d925e5;
+}
+
+.right .warning-wrapper .warning:hover {
+  filter: brightness(0.8);
+}
+
+.right .warning-wrapper .warning svg {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 10%);
+  z-index: 10;
+}
+
+.right .user-wrapper {
+  position: absolute;
+  top: 5rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 2.5px rgba(0, 0, 0, 0.1);
+  border: 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.right .user-wrapper svg {
+  transition: 0.25s ease;
+  color: #beada7;
+}
+
+.right .user-wrapper:hover svg {
+  color: #fff;
+}
+
+.right .window-options {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.right .window-options button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  border: 0;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.right .window-options button.minimize {
+  color: #9d9491;
+}
+
+.right .window-options button.minimize:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.right .window-options button.close {
+  color: #9d9491;
+}
+
+.right .window-options button.close:hover {
+  color: #fff;
+  background: #d13639;
+}
